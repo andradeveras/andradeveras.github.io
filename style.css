@@ -63,12 +63,17 @@ header {
 
 .navbar-nav {
     display: flex;
-    justify-content: flex-end; /* Alinha os itens à direita */
+    justify-content: space-between;
     width: 100%;
+    margin-left: auto;
 }
 
 .nav-item {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+}
+
+.nav-item.dark-mode {
+    color: #ffffff !important;
 }
 
 .nav-link {
@@ -93,7 +98,7 @@ body.dark-mode .nav-link {
 
 /* Estilos para seções */
 section {
-    padding: 60px 20px; /* Ajuste nas laterais */
+    padding: 60px 0;
     flex: 1; /* Faz com que o conteúdo empurre o footer para baixo */
 }
 
@@ -142,17 +147,12 @@ section {
 /* Responsividade para "Sobre Mim" */
 @media (max-width: 768px) {
     #sobre .col-md-4, #sobre .col-md-8 {
-        flex: 0 0 100%; /* Torna as colunas com 100% da largura */
-        text-align: center; /* Alinha o conteúdo no centro */
+        flex: 0 0 100%;
+        text-align: center;
     }
 
     #sobre img {
-        width: 60%; /* Ajuste para maior em telas menores */
         margin-bottom: 20px;
-    }
-
-    header {
-        padding: 15px 10px;
     }
 }
 
@@ -227,6 +227,8 @@ body.dark-mode .social-icons a {
     }
 }
 
+
+
 /* Seção de Título dos Projetos */
 .projects-title-section {
     display: flex;
@@ -294,6 +296,7 @@ body.dark-mode .social-icons a {
     border-radius: 8px;        /* Borda arredondada, se desejar */
 }
 
+
 /* Descrição do projeto */
 .project-card p {
     font-size: 1rem;
@@ -327,22 +330,15 @@ body.dark-mode .social-icons a {
 
 /* Modo escuro para cards de projetos */
 body.dark-mode .project-card {
-    background-color: rgba(17, 25, 31, 1);
-    color: #ffffff;
+    background-color: rgba(17, 25, 31, 1);  /* Cor de fundo escuro */
 }
 
-/* Adaptação para dispositivos móveis */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
+.btn.text-white {
+    color: white; /* Garantir que o texto fique branco */
+    background-color: #007bff; /* Cor de fundo */
+}
 
-    .projects-section {
-        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
-    }
-
-    .project-card {
-        padding: 15px; /* Ajuste no preenchimento */
-    }
+.btn.text-white:hover {
+    background-color: #0056b3; /* Cor de fundo quando passar o mouse */
 }
 
