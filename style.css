@@ -1,0 +1,348 @@
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Fundo claro */
+    color: #000000; /* Texto preto */
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    padding-top: 80px; /* Adiciona espaço abaixo do header */
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: rgba(17, 25, 31, 1); /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Header e Footer no modo claro */
+header, .footer {
+    background-color: #ffffff !important; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo escuro para Header e Footer */
+body.dark-mode header, 
+body.dark-mode .footer {
+    background-color: rgba(17, 25, 31, 1) !important; /* Azul escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Estilo do botão de alternância dentro da navegação */
+#toggle-theme {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Header e navegação */
+header {
+    background-color: #ffffff; /* Igual ao fundo */
+    color: #000000;
+    padding: 20px 0;
+    transition: background-color 0.3s, color 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    width: 100%;
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.nav-link {
+    color: #000000 !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f39c12;
+}
+
+/* Modo escuro para nav */
+body.dark-mode header {
+    background-color: rgba(17, 25, 31, 1);
+    color: #ffffff;
+}
+
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+/* Estilos para seções */
+section {
+    padding: 60px 20px; /* Ajuste nas laterais */
+    flex: 1; /* Faz com que o conteúdo empurre o footer para baixo */
+}
+
+/* "Sobre Mim" */
+#sobre .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+/* Garantir que o texto fique justificado */
+.justificado {
+    text-align: justify;
+}
+
+#sobre .col-md-4 {
+    flex: 0 0 35%;
+}
+
+#sobre .col-md-8 {
+    flex: 0 0 65%;
+}
+
+#sobre img {
+    width: 40%; /* Tamanho ideal para fotos de perfil */
+    height: auto;
+    border-radius: 50%; /* Mantém a imagem arredondada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
+    border: 4px solid rgba(255, 255, 255, 0.5); /* Borda sutil */
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+    transition: transform 0.3s ease-in-out; /* Efeito suave ao passar o mouse */
+}
+
+#sobre img:hover {
+    transform: scale(1.05); /* Efeito de leve zoom ao passar o mouse */
+}
+
+#sobre h2 {
+    margin-bottom: 1rem;
+}
+
+#sobre p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsividade para "Sobre Mim" */
+@media (max-width: 768px) {
+    #sobre .col-md-4, #sobre .col-md-8 {
+        flex: 0 0 100%; /* Torna as colunas com 100% da largura */
+        text-align: center; /* Alinha o conteúdo no centro */
+    }
+
+    #sobre img {
+        width: 60%; /* Ajuste para maior em telas menores */
+        margin-bottom: 20px;
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Fixando o footer no final */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Modo escuro para o footer */
+body.dark-mode .footer {
+    background-color: rgba(17, 25, 31, 1);
+    color: #ffffff;
+}
+
+/* Ícones de redes sociais */
+.social-icons a {
+    text-decoration: none;
+    color: #000000 !important;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .social-icons a {
+    color: #ffffff !important; /* Branco no modo escuro */
+}
+
+.social-icons i {
+    font-size: 24px;
+}
+
+.social-icons a:hover i {
+    color: #f39c12;
+}
+
+/* Modo escuro para ícones */
+body.dark-mode .social-icons a {
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    body {
+        padding: 0 20px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        margin-right: 1rem;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+}
+
+/* Seção de Título dos Projetos */
+.projects-title-section {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    text-align: center;       /* Centraliza o texto */
+    height: 150px;            /* Altura ajustável conforme necessário */
+    padding: 20px;
+    margin: 50px 0;           /* Espaçamento superior e inferior */
+}
+
+/* Título da seção */
+.section-title {
+    font-size: 2.5rem;        /* Aumenta o tamanho do título */
+    color: inherit;           /* Cor do título segue o tema */
+    margin: 0;                /* Remove margens automáticas */
+    font-family: 'Arial', sans-serif; /* Usa a mesma fonte do resto do site */
+}
+
+/* Seção de Projetos */
+.projects-section {
+    width: 90%;               /* Largura ajustada para melhor responsividade */
+    margin: 50px auto;
+    text-align: center;
+    display: grid;            /* Usando grid para disposição dos cards */
+    grid-template-columns: repeat(3, 1fr); /* Colunas ajustadas */
+    gap: 30px;                /* Espaçamento entre os cards */
+}
+
+/* Layout responsivo para telas menores */
+@media (max-width: 768px) {
+    .projects-section {
+        grid-template-columns: 1fr 1fr; /* 2 colunas para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        grid-template-columns: 1fr; /* 1 coluna para dispositivos móveis */
+    }
+}
+
+/* Cards de projetos */
+.project-card {
+    background-color: #ffffff;  /* Cor de fundo padrão */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Título do projeto */
+.project-card h3 {
+    font-size: 1.6rem;
+    color: inherit; /* Cor do título segue o tema */
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif; /* Mantém a mesma fonte */
+}
+
+.project-card img {
+    width: 100%;               /* Garante que a imagem ocupe toda a largura do card */
+    height: auto;              /* Mantém a proporção da imagem */
+    object-fit: cover;         /* Faz com que a imagem cubra todo o espaço sem distorcer */
+    border-radius: 8px;        /* Borda arredondada, se desejar */
+}
+
+/* Descrição do projeto */
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555; /* Cor de texto mais suave */
+}
+
+/* Link do projeto */
+.project-card a.project-link {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #2b28be; /* Cor consistente com o tema */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+/* Hover no link do projeto */
+.project-card a.project-link:hover {
+    background-color: #218838; /* Cor de hover similar ao tema */
+}
+
+/* Efeito de hover nos cards */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modo escuro para cards de projetos */
+body.dark-mode .project-card {
+    background-color: rgba(17, 25, 31, 1);
+    color: #ffffff;
+}
+
+/* Adaptação para dispositivos móveis */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-section {
+        grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+    }
+
+    .project-card {
+        padding: 15px; /* Ajuste no preenchimento */
+    }
+}
+

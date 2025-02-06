@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Veras | Portfólio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="m-0">Leonardo Veras</h1>
+        <nav class="navbar navbar-expand-lg ">
+            <!-- Botão de alternância do menu em telas pequenas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu de navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-light" href="/projetos.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="/curriculo.html">Currículo</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="/index.html">Sobre Mim</a></li>
+                </ul>
+            </div>
+            
+            <!-- Botão de alternância de modo escuro -->
+            <button id="toggle-theme" class="btn btn-light ms-3">
+                <i class="fas fa-moon fa-sm"></i> <!-- Ícone pequeno -->
+            </button>
+        </nav>
+    </div>
+</header>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="fotoperfil.jpeg" alt="Foto de Leonardo Veras" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Desenvolvedor Full Stack especializado em Ruby on Rails, com mais de dois anos de experiência no desenvolvimento de soluções robustas e escaláveis.
+                    Tenho expertise em arquitetura MVC, APIs RESTful e integração com bancos de dados, com forte domínio das melhores práticas e da filosofia de código 
+                    limpo. Tenho experiência com Ruby, Git, CI/CD e testes automatizados, sempre buscando otimizar processos e entregar soluções eficientes. Sou apaixonado
+                    por colaboração em equipe, sempre contribuindo para a resolução de problemas de forma ágil e assertiva, com foco em resultados e qualidade.
+                </p>
+                <a href="#contato" class="btn btn-primary">Contate-me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Habilidades -->
+<section id="habilidades" class="mt-4">
+
+    <div id="tech-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <i class="fab fa-python fa-3x text-primary"></i>
+                            <p>Python</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-gem fa-3x text-danger"></i>
+                            <p>Ruby</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-js-square fa-3x text-warning"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-database fa-3x text-info"></i>
+                            <p>SQL</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-cogs fa-3x text-danger"></i>
+                            <p>Ruby on Rails</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-python fa-3x text-success"></i>
+                            <p>Django</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <i class="fab fa-react fa-3x text-primary"></i>
+                            <p>React</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-bootstrap fa-3x" style="color: purple;"></i>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-database fa-3x text-primary"></i>
+                            <p>PostgreSQL</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-server fa-3x text-danger"></i>
+                            <p>Redis</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-git-alt fa-3x text-dark"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-gitlab fa-3x" style="color: orange;"></i>
+                            <p>GitLab CI/CD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-2">
+                            <i class="fas fa-sitemap fa-3x text-primary"></i>
+                            <p>Arquitetura MVC</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-network-wired fa-3x text-info"></i>
+                            <p>Microsserviços</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-cloud fa-3x text-success"></i>
+                            <p>Hospedagem na Nuvem</p>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-wordpress fa-3x text-dark"></i>
+                            <p>WordPress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles do Carrossel -->
+        <a class="carousel-control-prev" href="#tech-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#tech-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</section>
+
+
+
+    <!-- Bootstrap JS e Script Pessoal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer py-3 mt-5">
+    <div class="container text-center">
+        <p>&copy; 2025 Leonardo Veras. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/andradeveras" target="_blank" class="text-white mx-3">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/laveras" target="_blank" class="text-white mx-3">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/andradeveras" target="_blank" class="text-white mx-3">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</html>
